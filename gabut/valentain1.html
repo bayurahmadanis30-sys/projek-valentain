@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Love Container -->
+    <div class="love-bg" id="loveBackground"></div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <audio id="bgMusic" loop>
+            <source src="nadhif basalamah - penjaga hati (Official Lyric Video) - nadhif basalamah.mp3#t=60" type="audio/mp3">
+        </audio>
+        <button class="music-btn" id="musicToggle">
+            <span class="music-icon">🔊</span>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Halaman 1: Will you be my Valentine? -->
+        <div class="page active" id="page1">
+            <div class="valentine-card">
+                <h1 class="title">Will you be my Valentine?</h1>
+                <p class="subtitle">Please say yes</p>
+                
+                <div class="heart-large">❤️</div>
+                
+                <div class="buttons">
+                    <button class="btn btn-yes" onclick="nextPage(2)">YES</button>
+                    <button class="btn btn-no" id="noBtn">NO</button>
+                </div>
+                
+                <div id="noMessage" class="no-message"></div>
+            </div>
+        </div>
+
+        <!-- Halaman 2: YEAAAY! -->
+        <div class="page" id="page2">
+            <div class="valentine-card">
+                <h1 class="title">YEAAAY! Kamu Beneran Mau ❤️</h1>
+                <p class="message">Mulai dari sekarang kamu resmi jadi...</p>
+                <h2 class="big-text">My Valentine ❤️</h2>
+                
+                <div class="heart-animation">
+                    <div class="heart"></div>
+                </div>
+                
+                <div class="buttons">
+                    <button class="btn btn-yes" onclick="nextPage(3)">Lanjut</button>
+                    <button class="btn btn-yes" id="berhenti">berhenti</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman 3: Ini hadiah spesial buat kamu -->
+        <div class="page" id="page3">
+            <div class="valentine-card">
+                <h1 class="title">Ini hadiah spesial buat kamu</h1>
+                
+                <div class="gift-box" onclick="nextPage(4)">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon"></div>
+                    <div class="gift-bow"></div>
+                </div>
+                
+                <p class="click-message">Klik kotak hadiahnya!</p>
+            </div>
+        </div>
+
+        <!-- Halaman 4: My Beautiful You -->
+        <div class="page" id="page4">
+            <div class="valentine-card">
+                <h1 class="title">My Beautiful You ❤️</h1>
+                
+                <p class="love-letter">
+                    Sejak kamu hadir, hal sederhana pun terasa istimewa.<br>
+                    Happy Valentine, my favorite person ❤️
+                </p>
+                
+                <div class="floating-hearts">
+                    <span>❤️</span>
+                    <span>❤️</span>
+                    <span>❤️</span>
+                </div>
+                
+                <div class="buttons">
+                    <button class="btn btn-yes" onclick="nextPage(5)">Satu halaman lagi...</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman 5: Happy Valentine My Love -->
+        <div class="page" id="page5">
+            <div class="valentine-card final-card">
+                <h1 class="title">Happy Valentine, My Love ❤️</h1>
+                
+                <p class="final-message">
+                    Makasih ya sudah hadir dan bikin hariku selalu terasa cukup.<br>
+                    Kamu adalah alasan kenapa senyum itu mudah muncul.<br>
+                    Semoga hari-harimu selalu penuh kehangatan dan kebahagiaan.<br>
+                    Aku selalu ada untukmu.<br>
+                    <br>
+                    Happy Valentine ❤️
+                </p>
+                
+                <div class="signature">Dari orang yang sayang kamu ❤️</div>
+                
+                <div class="buttons">
+                    <button class="btn btn-yes" onclick="restart()">Ulangi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
